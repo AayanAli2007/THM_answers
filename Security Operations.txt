@@ -1,0 +1,6 @@
+https://tryhackme.com/room/httpindetail
+https://tryhackme.com/room/winadbasics
+https://tryhackme.com/room/monikerlink
+https://tryhackme.com/room/dnsindetail
+https://tryhackme.com/room/socfundamentals
+https://tryhackme.com/room/firewallfundamentals
