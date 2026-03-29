@@ -1,16 +1,11 @@
 # THM_answers
 
 -- EXTRAS
-import requests
-import re
+const links = document.querySelectorAll('a[href^="/room/"]');
 
-url = "https://tryhackme.com/your-page-here"
-html = requests.get(url).text
-
-matches = re.findall(r'href="(/room/[^"]+)"', html)
-
-for m in matches:
-    print("https://tryhackme.com" + m)
+links.forEach(link => {
+    console.log("https://tryhackme.com" + link.getAttribute("href"));
+});
 -- EXTRAS
 
 
