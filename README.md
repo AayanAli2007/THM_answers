@@ -1,5 +1,19 @@
 # THM_answers
 
+-- EXTRAS
+import requests
+import re
+
+url = "https://tryhackme.com/your-page-here"
+html = requests.get(url).text
+
+matches = re.findall(r'href="(/room/[^"]+)"', html)
+
+for m in matches:
+    print("https://tryhackme.com" + m)
+-- EXTRAS
+
+
 https://tryhackme.com/room/beginnerpathintro
 Ben.Spring
 THM{BRUTEFORCING}
