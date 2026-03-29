@@ -1,11 +1,23 @@
 # THM_answers
 
 -- EXTRAS
-const links = document.querySelectorAll('a[href^="/room/"]');
+const html = document.body.innerHTML;
 
-links.forEach(link => {
-    console.log("https://tryhackme.com" + link.getAttribute("href"));
-});
+// Match all room hrefs
+const matches = html.match(/href="(\/room\/[^"]+)"/g);
+
+const links = [];
+
+if (matches) {
+    matches.forEach(m => {
+        // Extract the path from href
+        const path = m.replace(/href="|"/g, "");
+        links.push("https://tryhackme.com" + path);
+    });
+}
+
+// Output the entire array at once
+console.log(links.join("\n"));
 -- EXTRAS
 
 
