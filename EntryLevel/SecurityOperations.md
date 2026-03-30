@@ -5,8 +5,7 @@ https://tryhackme.com/room/dnsindetail
 https://tryhackme.com/room/socfundamentals  
 https://tryhackme.com/room/firewallfundamentals  
 
-# Answers  
-## httpindetail
+# httpindetail
 Task 1
 - HyperText Transfer Protocol  
 - secure
