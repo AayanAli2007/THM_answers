@@ -15,6 +15,6 @@ https://tryhackme.com/room/bypassdisablefunctions
 No answers needed
 
 # offensivesecurityintro
-Task 1: Offensive Security
+Task 1: Offensive Security  
 Task 2: BANK-HACKED
 
