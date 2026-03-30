@@ -1,9 +1,8 @@
 https://tryhackme.com/room/httpindetail  
 https://tryhackme.com/room/winadbasics -- Has Prerequisites of Windows Fundamentals in Exploitation/PenetrationTesting
-https://tryhackme.com/room/monikerlink  
 https://tryhackme.com/room/dnsindetail  
 https://tryhackme.com/room/socfundamentals  
-https://tryhackme.com/room/firewallfundamentals  
+https://tryhackme.com/room/monikerlink -- CVE
 
 # httpindetail
 Task 1
