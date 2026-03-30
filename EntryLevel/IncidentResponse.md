@@ -1,0 +1,6 @@
+https://tryhackme.com/room/defensivesecurityintro  
+https://tryhackme.com/room/defensivesecurityintroqW  
+https://tryhackme.com/room/securityawarenessintro  
+https://tryhackme.com/room/searchskills  
+
+
