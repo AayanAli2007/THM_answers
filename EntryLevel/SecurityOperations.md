@@ -1,4 +1,4 @@
-https://tryhackme.com/room/httpindetail  
+https://tryhackme.com/room/httpindetail -- DONE
 https://tryhackme.com/room/dnsindetail  
 https://tryhackme.com/room/socfundamentals  
 https://tryhackme.com/room/winadbasics -- Has Prerequisites of Windows Fundamentals in Exploitation/PenetrationTesting
