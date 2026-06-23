@@ -42,3 +42,43 @@ Task 7:
 # offensivesecurityintro
 Task 1: Offensive Security  
 Task 2: BANK-HACKED
+
+# webapplicationbasics
+Task 2: 
+- web server
+- web browser
+- web application firewall
+Task 3:
+- HTTPS
+- Typosquatting
+- Query String
+Task 4:
+- HTTP response
+- Empty Line
+Task 5:
+- HTTP/1.1
+- OPTIONS
+- URL Path
+Task 6:
+- Host
+- application/x-www-form-urlencoded
+- Request Headers
+Task 7:
+- Status Line
+- Server Error Responses
+- 404
+Task 8:
+- Server
+- Secure
+- HttpOnly
+Task 9:
+- script-src
+- includeSubDomains
+- nosniff
+Task 10:
+- THM{YOU_HAVE_JUST_FOUND_THE_USER_LIST}
+- THM{YOU_HAVE_MODIFIED_THE_USER_DATA}
+- THM{YOU_HAVE_JUST_DELETED_A_USER}
+
+
+
