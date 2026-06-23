@@ -41,6 +41,26 @@ Task 7
 - THM{USER_HAS_UPDATED}
 - THM{HTTP_REQUEST_MASTER}
 
+# dnsindetail
+Task 1: https://tryhackme.com/room/dnsindetail
+Task 2:
+- 63
+- _
+- 253
+- ccTLD
+Task 3:
+- MX
+- AAAA
+Task 4:
+- TTL
+- recursive
+- authoritative
+Task 5:
+- shops.myshopify.com
+- THM{7012BBA60997F35A9516C2E16D2944FF}
+- 30
+- 10.10.10.10
+
 
 
 
