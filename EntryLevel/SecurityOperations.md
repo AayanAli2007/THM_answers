@@ -1,6 +1,6 @@
 https://tryhackme.com/room/httpindetail -- DONE  
 https://tryhackme.com/room/dnsindetail  -- DONE  
-https://tryhackme.com/room/socfundamentals  -- DONE
+https://tryhackme.com/room/socfundamentals  -- DONE  
 https://tryhackme.com/room/winadbasics -- Has Prerequisites of Windows Fundamentals in Exploitation/PenetrationTesting
 https://tryhackme.com/room/monikerlink -- CVE
 
