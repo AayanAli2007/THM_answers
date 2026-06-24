@@ -1,6 +1,6 @@
 https://tryhackme.com/room/httpindetail -- DONE  
 https://tryhackme.com/room/dnsindetail  -- DONE  
-https://tryhackme.com/room/socfundamentals  
+https://tryhackme.com/room/socfundamentals  -- DONE
 https://tryhackme.com/room/winadbasics -- Has Prerequisites of Windows Fundamentals in Exploitation/PenetrationTesting
 https://tryhackme.com/room/monikerlink -- CVE
 
@@ -61,7 +61,34 @@ Task 5:
 - 30
 - 10.10.10.10
 
-
+# socfundamentals
+Task 1: Security Operations Center 
+Task 2:
+- Detection
+- People, Process, Technology
+Task 3:
+- SOC Analyst (Level 1)
+- Detection Engineer
+Task 4:
+- Who
+- What
+Task 5:
+- Firewall
+- yea
+Task 6:  
+First it is a Port Scanning Activity so Q1 is
+- Port Scan
+Then we can see time next to it
+- June 12, 2024 17:24
+First see that PAUL PC issue of malware has been resolved about 10h before that.
+Then click the "Acknowledge/Investigate SIEM".
+We can see the desintation IP is consistently "10.0.0.3"
+- "10.0.0.3"
+- NESSUS
+We can see its intended as JOE PC has responded using port 22
+- Intended
+- yea
+- THM{000_INTRO_TO_SOC}
 
 
 
