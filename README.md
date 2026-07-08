@@ -12,5 +12,3 @@ This repository is mainly for deloping your THM skills matrix as all the links l
 
 Give me a follow
 > https://tryhackme.com/p/aayanaliuk
-
-> Notes are written in a short bullet-point style for fast lookup.
