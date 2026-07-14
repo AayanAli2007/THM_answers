@@ -6,8 +6,36 @@ Leart quite a lot of Burp and its general usages (I got quite fond of using the 
 
 # https://portswigger.net/web-security/learning-paths/sql-injection
 Also did: https://tryhackme.com/room/sqlinjectionlm
+And followed with: https://portswigger.net/web-security/sql-injection
 And learnt some SQL first.
 Realy quite fun but started to struggle arround the Blind SQL injection.
 It is so much easier doing things in the Repeaters response renderer than in the broswer but the render has a limited veiw so 
 I would use the decoder then copy the injection into my broswer after being URL encoding are annoying.
+
+For Blind SQL injection with conditional responses
+I injected 
+wDHokYkIh7sYRNGW' AND EXISTS(SELECT 1 FROM users) OR '1'='2
+To test if the table existed, then got stuck. So i check the solution.
+Solution relied on funky SQL outputing
+The command: (SELECT 'a' FROM users WHERE username='administrator')='a'
+This first checks if the username is present in the table
+- If it is then an 'a' is selected and then compated with an 'a' returning true
+- If it isnt then '' is outpued so after comparision its a false.
+
+IMPORTANT: The cookies use a URL encoding thats why the SQL wildcard was thowing errors
+First i run the repeater arround the first letter
+wDHokYkIh7sYRNGW' AND (SELECT password FROM users WHERE username='administrator') LIKE 'a%
+Giving me 's' as the first character then i repeat.
+Holy moly this one was long. The password was 's5jk3om00py9loq4w7qt'.
+
+Next:
+- https://portswigger.net/web-security/learning-paths/path-traversal
+- https://portswigger.net/web-security/learning-paths/file-upload-vulnerabilities
+- https://portswigger.net/web-security/learning-paths/authentication-vulnerabilities/
+- https://portswigger.net/web-security/learning-paths/api-testing
+After:
+- https://portswigger.net/web-security/learning-paths/ssrf-attacks
+- https://portswigger.net/web-security/learning-paths/cors
+- https://portswigger.net/web-security/learning-paths/csrf
+
 
