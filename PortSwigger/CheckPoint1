@@ -28,6 +28,12 @@ wDHokYkIh7sYRNGW' AND (SELECT password FROM users WHERE username='administrator'
 Giving me 's' as the first character then i repeat.
 Holy moly this one was long. The password was 's5jk3om00py9loq4w7qt'.
 
+
+https://portswigger.net/web-security/access-control
+Lab: User role can be modified in user profile
+This one was wierd becuase you can change the JSON request to add a field that wasnt their before???
+
+
 Next:
 - https://portswigger.net/web-security/learning-paths/path-traversal
 - https://portswigger.net/web-security/learning-paths/file-upload-vulnerabilities
