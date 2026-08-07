@@ -1,0 +1,70 @@
+Now from my research before going into Bug Bounty Hunting the "low hanging fruit" of vunerabilities (that are easier for begginers are as followed
+1) Insecure direct object references (IDOR) // Acsess controll
+2) Authentication vulnerabilities
+3) File upload vulnerabilities
+4) API
+
+So ill be going throught these particual topics before starting my Bug Hunting Journey
+
+https://portswigger.net/web-security/access-control
+
+Lab: URL-based access control can be circumvented
+You can use the methord "X-Original-URL" and "X-Rewrite-URL" to get past restriction
+
+Lab: Method-based access control can be circumvented
+Now this one was odd because they gave you acces to an admin account for reference and I had to see the solution
+The solution was to copy the admin's upgrade request (putting in your own cookie) and then changing the methord to an invalid on (such as "POSTX") to allow for a different error to show instead
+The error shows was one asking for params. So after changing to a GET request and adding params into the URL then you can upgrade your permissions without an admin's cookies
+
+Lab: User ID controlled by request parameter with data leakage in redirect
+This one is interesting. Even you the response was a redirect response. The website still send the webpage for that user before redirecting allow you to render the HTML if you have the response.
+Im assuming this one might be a bit common
+
+Lab: Multi-step process with no access control on one step
+This one also feels like it may be common becuase of how many steps a smaller action can take (such as promoting a user)
+
+Lab: Referer-based access control
+For this one after inspecting the real upgrade request and the upgrade request made by a non-admin user the differnce is the line
+''' Referer: https://0a3.web-security-academy.net/admin '''
+It is assuming that you already are supposed to have access to /admin because your broswer said that you just came from there (even if you didnt)
+
+
+
+https://portswigger.net/web-security/access-control/idor
+Lab: Insecure direct object references
+This one was quite silly, who on earth messages someone thier password...
+
+
+https://portswigger.net/web-security/authentication
+https://portswigger.net/web-security/authentication/password-based
+
+Lab: Username enumeration via subtly different responses
+Now i should have gotten it by the name... but I didnt.
+So i also had to look at the solution for this one and it made sense.
+Silly vunerability if u ask me... but it is an important one indeed
+
+Lab: Username enumeration via response timing
+Now this one was tricky because of the Brute Force detection
+BUUUT after quick look on `https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers` and searching for "IP" gives us the header
+`X-Forwarded-For header`
+So using a pitchfork attack i just itterated through different IP adress and placed an incribly long password and waited till a request too a suspicously long amount of time and VIOLA.
+
+Lab: Broken brute-force protection, IP block
+https://www.youtube.com/watch?v=wxyAT0lFmuM
+https://www.youtube.com/watch?v=aPu6arKIdmE
+Now this one was interesting. It shows a way to use a faster (free) version of the normal intruder, that is miles more costomisable
+```
+    for word in open(r"C:\Users\aayan\Downloads\auth-lab-passwords.txt"):
+        engine.queue(target.req, ["carlos", word.rstrip()])
+        
+        engine.queue(target.req, ["wiener", "peter"])
+```
+
+
+
+
+
+
+
+
+
